@@ -1,0 +1,18 @@
+name: Notify iamchriswick/devcontainers on Push
+
+on:
+  push:
+    branches: [ main ] # Change if your submodule uses a different default branch
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger iamchriswick/devcontainers workflow
+        uses: peter-evans/repository-dispatch@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: iamchriswick/devcontainers
+          event-type: submodule-updated
+          client-payload: '{"submodule": "templates"}'
+          
