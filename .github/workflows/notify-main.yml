@@ -11,7 +11,7 @@ jobs:
       - name: Trigger iamchriswick/devcontainers workflow
         uses: peter-evans/repository-dispatch@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.DEVCONTAINERS_REPO_PAT }}
           repository: iamchriswick/devcontainers
           event-type: submodule-updated
           client-payload: '{"submodule": "templates"}'
