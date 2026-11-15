@@ -75,7 +75,7 @@ Templates are individually versioned by the `version` attribute in a Template's 
 
 Templates are source files packaged together that encode configuration for a complete development environment.
 
-This repo contains a GitHub Action [workflow](.github/workflows/release.yaml) that will publish each template to GHCR.  By default, each Template will be prefixed with the `<owner>/<repo>` namespace.  For example, the two Templates in this repository can be referenced by an [implementing tool](https://containers.dev/supporting#tools) with:
+This repo contains a GitHub Action [workflow](./.github/workflows/release.yaml) that will publish each template to GHCR.  By default, each Template will be prefixed with the `<owner>/<repo>` namespace.  For example, the two Templates in this repository can be referenced by an [implementing tool](https://containers.dev/supporting#tools) with:
 
 ```
 ghcr.io/devcontainers/template-starter/color:latest
@@ -108,7 +108,7 @@ This index is from where [supporting tools](https://containers.dev/supporting) l
 
 ### Testing Templates
 
-This repo contains a GitHub Action [workflow](.github/workflows/test-pr.yaml) for testing the Templates. Similar to the [`devcontainers/templates`](https://github.com/devcontainers/templates) repo, this repository has a `test` folder.  Each Template has its own sub-folder, containing at least a `test.sh`.
+This repo contains a GitHub Action [workflow](./.github/workflows/test-pr.yaml) for testing the Templates. Similar to the [`devcontainers/templates`](https://github.com/devcontainers/templates) repo, this repository has a `test` folder.  Each Template has its own sub-folder, containing at least a `test.sh`.
 
 For running the tests locally, you would need to execute the following commands -
 
@@ -119,4 +119,4 @@ For running the tests locally, you would need to execute the following commands 
 
 ### Updating Documentation
 
-This repo contains a GitHub Action [workflow](.github/workflows/release.yaml) that will automatically generate documentation (ie. `README.md`) for each Template. This file will be auto-generated from the `devcontainer-template.json` and `NOTES.md`.
+This repo contains a GitHub Action [workflow](./.github/workflows/release.yaml) that will automatically generate documentation (ie. `README.md`) for each Template. This file will be auto-generated from the `devcontainer-template.json` and `NOTES.md`.
